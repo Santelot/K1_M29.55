@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1 - M29.5 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M29.5 - SCAMPER</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 2 "Code Squad" y saluda a los niños. Introduce el tema del día, la letra 'E' de SCAMPER, y la artesanía Wixarika.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! ¡Qué bueno verlos! Hoy tenemos una misión súper colorida y llena de símbolos mágicos. Vamos a usar la 'E' de SCAMPER, que significa *Eliminar*, para explorar el arte Wixarika, también conocido como arte Huichol. ¡Conoceremos a una abuela sabia y veremos cómo simplificar sus increíbles diseños! Pero primero, ¡a despertar el cuerpo y la mente con el baile de SCAMPER! ¿Están listos?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_scamper')">
+                <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+            </div>
+            <div id="baile_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños con los pasos del baile SCAMPER.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡A moverse, equipo! Sigan mis pasos y bailemos juntos al ritmo de SCAMPER. Recuerden, no hay pasos incorrectos, ¡solo diversión y creatividad! ¡Vamos, con energía!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+                <div class="subtitle">Introduce la historia de Abuela Citlalli y los textiles Wixarika.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 4 "Desafío de Innovación" e introduce el video sobre los textiles Wixarika y Abuela Citlalli.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy vamos a viajar a las montañas de la Sierra Madre Occidental para conocer a Abuela Citlalli, una artista Wixarika que crea arte increíble con chaquiras y estambre. Sus diseños están llenos de símbolos mágicos. ¡Veamos su historia y cómo podemos ayudarla!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 5 "Video Textiles Wixarika" y al final haz preguntas para verificar la comprensión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Qué arte tan hermoso y lleno de significado! Ya conocimos a Abuela Citlalli y sus creaciones Wixarika. Ahora, unas preguntitas: ¿Qué materiales usa Abuela Citlalli? (Esperar respuestas: chaquiras, estambre). ¿Y qué representan sus diseños? (Esperar respuestas: símbolos, historias, naturaleza). ¿Y cuál es su deseo? (Esperar respuestas: crear diseños más simples). ¿Qué letra de SCAMPER vamos a usar para ayudarla? (Esperar respuestas: ¡la 'E' de *Eliminar*!). ¡Perfecto, estamos listos para simplificar con imaginación!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('introduccion_scamper')">
+                <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Explica cómo hacer preguntas de innovación con "Eliminar".</div>
+            </div>
+            <div id="introduccion_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 "E de Eliminar" y explica el concepto aplicado al arte Wixarika.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, hoy usaremos la magia de *Eliminar*! ¿Recuerdan qué significa? ¡Quitar algo para descubrir algo nuevo! En el arte Wixarika, que tiene tantos detalles, ¡*eliminar* puede ayudarnos a enfocarnos en un símbolo especial o a usar menos colores para crear un diseño más moderno! ¡Vamos a aprender la fórmula secreta para hacer preguntas y simplificar el arte de Abuela Citlalli!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('metodologia_qtf')">
+                <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+            </div>
+            <div id="metodologia_qtf" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Paso 1 Metodología QTF" y presenta el estímulo (una imagen de arte Wixarika complejo).</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Observen bien esta pieza de arte Wixarika, CODE SQUAD! ¿Ven cuántos colores y figuras tiene? (Esperar respuestas). ¡Es muy detallado! Ahora, usaremos nuestra fórmula de *Eliminar* para pensar cómo simplificarlo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Fórmula Preguntas" y explica la fórmula de Eliminar aplicada a los textiles.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Aquí está la fórmula, equipo! "¿Qué podríamos *Eliminar* de [colores, figuras, símbolos, fondo] del textil Wixarika para hacerlo más [simple, enfocado, moderno]?". Por ejemplo: "¿Qué podríamos *Eliminar* de los animales del diseño para que solo quede el venado?". ¡Ahora es su turno de crear preguntas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (3 minutos):</strong> Reproduce la DIAPOSITIVA 9 "Formulación de Preguntas" y guía a los niños. Sugiere eliminar colores, símbolos secundarios, detalles del fondo, etc. Anota las preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos, genios! Usen la fórmula. ¿Qué quitarían? ¿Los colores brillantes? ¿Algunos de los símbolos? ¿El fondo lleno de detalles? ¿Y si dejamos solo un color principal? ¡Escribamos todas las preguntas que se les ocurran! ¡Cada pregunta es una puerta a una nueva idea!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Reproduce la DIAPOSITIVA 10 "Mejorar preguntas" y explica cómo hacerlas más específicas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genial, genios! Hicieron preguntas muy interesantes. Ahora, vamos a hacerlas súper específicas. En lugar de "¿Qué colores quitamos?", podríamos preguntar: "¿Qué colores podríamos *Eliminar* para que solo queden el azul y el amarillo?". ¡A ser muy claros con lo que queremos quitar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (3 minutos):</strong> Reproduce la DIAPOSITIVA 11 "Ejemplo Pregunta Específica" y facilita la mejora de preguntas. Anota las nuevas preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos a refinar nuestras ideas! Tomemos una pregunta: "¿Qué figuras quitamos?". ¿Cómo la harían más específica? Quizás: "¿Qué figuras podríamos *Eliminar* para que solo quede el símbolo del sol?". ¡Vamos a transformar cada pregunta en un plan claro para nuestro diseño!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6 -->
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('prototipado_textiles')">
+                <div class="title">🖍️ Actividad 6: Prototipado en Papel de Textiles Wixarika ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Aplica las preguntas formuladas en el diseño de los textiles.</div>
+            </div>
+            <div id="prototipado_textiles" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 12 "Innovando Textiles Wixarika" y explica que aplicarán las preguntas para crear nuevos diseños.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Manos a la obra, CODE SQUAD! Con todas esas preguntas súper específicas, ¡es hora de dibujar nuestros propios diseños Wixarika simplificados! ¡Vamos a mostrarle a Abuela Citlalli nuestras ideas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 13 "Entregar Materiales" y distribuye papel, lápices, colores y opcionalmente estambre o cuentas grandes.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Aquí tienen sus materiales, artistas! Papel, colores, y si quieren, ¡hasta estambre o cuentas para darle textura! ¡Todo listo para crear!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la DIAPOSITIVA 14 "Diseñar Textil Wixarika" y guía a los niños a dibujar sus diseños simplificados.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡A dibujar, genios! ¿Qué van a *Eliminar* en su diseño? ¿Se enfocarán en un solo símbolo? ¿Usarán menos colores? ¡Dibujen su idea y coloreenla! ¡Recuerden que la simplicidad también puede ser hermosa!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7 -->
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+                <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Presenta la adición de tecnología al reto: Captura de Movimiento (Motion Capture).</div>
+            </div>
+            <div id="presentacion_tecnologia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 15 "Presentación de Tecnología" y explica qué es la captura de movimiento.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Atención, CODE SQUAD! Ahora vamos a descubrir una tecnología súper divertida que nos permite interactuar con el arte digital: ¡la Captura de Movimiento o *Motion Capture*!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (2 minutos):</strong> Reproduce la DIAPOSITIVA 16 "Video de Captura de Movimiento" y al final facilita preguntas para verificar la comprensión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Wow, vieron eso! La captura de movimiento usa cámaras especiales para ver cómo nos movemos. ¿Qué podemos hacer con eso? (Esperar respuestas). ¡Podemos hacer que personajes digitales se muevan como nosotros, o que el arte en una pantalla reaccione a nuestros gestos! ¿Cómo podríamos usarla con nuestros diseños Wixarika simplificados? (Esperar respuestas). ¡Podríamos hacer que los colores cambien al mover las manos, o que los símbolos aparezcan y desaparezcan al bailar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Reproduce la DIAPOSITIVA 17 "Textiles Interactivos" y muestra ejemplos de arte digital interactivo que podría usar captura de movimiento.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Miren estos ejemplos! Aquí, el arte digital cambia cuando la gente se mueve. Imaginen nuestros diseños Wixarika cobrando vida de esta manera. ¡Podríamos crear una experiencia mágica!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la DIAPOSITIVA 18 "Integración de Tecnología" y guía a los niños a pensar cómo incorporar la captura de movimiento.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, piensen en sus diseños simplificados. Si los convirtiéramos en arte digital, ¿cómo usarían la captura de movimiento? ¿Harían que el venado saltara al levantar los brazos? ¿Que el sol brillara más al aplaudir? ¡Imaginen la interacción más divertida y añádanla a su idea!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_textiles')">
+                <div class="title">🎨 Actividad 8: Presentación de Textiles Wixarika ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Organiza la presentación de los diseños en grupos de 3.</div>
+            </div>
+            <div id="presentacion_textiles" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (3 minutos):</strong> Reproduce la DIAPOSITIVA 19 "Presentación Textiles" y organiza a los niños en grupos de 3 para presentar sus diseños.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Es hora de compartir nuestras creaciones, CODE SQUAD! Vamos a formar grupos de tres. Cada uno mostrará su diseño Wixarika simplificado y explicará qué *eliminó* y cómo usaría la captura de movimiento para hacerlo interactivo. ¡A escuchar y celebrar las ideas de todos!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 9 -->
+        <div id="activity-9" class="activity">
+            <div class="banner" onclick="toggleContent('conclusion_historia')">
+                <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+            </div>
+            <div id="conclusion_historia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 20 "Conclusión y Cierre" y felicita al CODE SQUAD.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Impresionante trabajo, CODE SQUAD! Abuela Citlalli está muy feliz con sus ideas para simplificar el arte Wixarika. Han demostrado que *eliminar* también es crear, ¡y que la tecnología puede hacer el arte aún más mágico! ¡Sigan usando su creatividad, genios! ¡Nos vemos en la próxima misión!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    // This needs refinement - the time should be pulled from data attributes
+                    // For now, just showing all steps regardless of time for demo
+                     // Example: var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    // if (stepTime === 0) {
+                    //     step.style.display = 'none';
+                    // } else {
+                    //     step.style.display = 'table-row';
+                    // }
+                     step.style.display = 'table-row'; // Temporary fix
+                });
+            });
+        }
+
+        // Initial setup based on default selection
+        updateContent(); // Call on load
+    </script>
+</body>
+</html>
